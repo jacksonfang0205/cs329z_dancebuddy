@@ -1,0 +1,104 @@
+{
+ "passed": false,
+ "checks": {
+  "accent_recall": {
+   "value": 0.125,
+   "threshold": 0.75,
+   "passed": false,
+   "missed_accents": [
+    {
+     "frame": 21,
+     "unit_id": 0
+    },
+    {
+     "frame": 68,
+     "unit_id": 1
+    },
+    {
+     "frame": 105,
+     "unit_id": 1
+    },
+    {
+     "frame": 111,
+     "unit_id": 2
+    },
+    {
+     "frame": 138,
+     "unit_id": 2
+    },
+    {
+     "frame": 181,
+     "unit_id": 2
+    },
+    {
+     "frame": 191,
+     "unit_id": 2
+    }
+   ]
+  },
+  "beat_precision": {
+   "value": 0.429,
+   "threshold": 0.5,
+   "passed": false,
+   "off_beat_hits": [
+    {
+     "frame": 98,
+     "unit_id": 1
+    },
+    {
+     "frame": 130,
+     "unit_id": 2
+    },
+    {
+     "frame": 146,
+     "unit_id": 2
+    },
+    {
+     "frame": 175,
+     "unit_id": 2
+    }
+   ]
+  },
+  "limits": {
+   "passed": false,
+   "violations": [
+    {
+     "channel": "arm_L.lean",
+     "limit": 70,
+     "peak": 156.58,
+     "frames": [
+      66,
+      121
+     ]
+    },
+    {
+     "channel": "arm_R.lean",
+     "limit": 70,
+     "peak": 123.034,
+     "frames": [
+      105,
+      120
+     ]
+    },
+    {
+     "channel": "top.sway",
+     "limit": 35,
+     "peak": 77.226,
+     "frames": [
+      14,
+      88
+     ]
+    }
+   ]
+  },
+  "idle_units": {
+   "passed": true,
+   "unit_ids": []
+  }
+ },
+ "summary": {
+  "n_accents": 8,
+  "n_character_hits": 7,
+  "mean_offset_ms": 66.7
+ }
+}

@@ -1,0 +1,141 @@
+{
+ "source": "/Users/jackson/Downloads/dance.mp4",
+ "fps": 30.0,
+ "n_frames": 193,
+ "duration_s": 6.43,
+ "beats": [
+  6,
+  15,
+  21,
+  31,
+  43,
+  54,
+  68,
+  81,
+  94,
+  105,
+  111,
+  138,
+  154,
+  181,
+  191
+ ],
+ "accents": [
+  15,
+  21,
+  68,
+  105,
+  111,
+  138,
+  181,
+  191
+ ],
+ "units": [
+  {
+   "id": 0,
+   "start": 0,
+   "end": 51,
+   "start_s": 0.0,
+   "end_s": 1.7,
+   "accents": [
+    15,
+    21
+   ],
+   "beats": [
+    6,
+    15,
+    21,
+    31,
+    43
+   ],
+   "label": "full-body",
+   "dominant_regions": [
+    "arms",
+    "head"
+   ],
+   "region_share": {
+    "arms": 0.43,
+    "legs": 0.19,
+    "torso": 0.13,
+    "head": 0.25
+   },
+   "features": {
+    "mean_speed_mps": 0.992,
+    "vertical_bounce_mps": 0.354,
+    "torso_twist_range_deg": 30.0,
+    "torso_side_lean_range_deg": 27.0
+   }
+  },
+  {
+   "id": 1,
+   "start": 52,
+   "end": 108,
+   "start_s": 1.73,
+   "end_s": 3.6,
+   "accents": [
+    68,
+    105
+   ],
+   "beats": [
+    54,
+    68,
+    81,
+    94,
+    105
+   ],
+   "label": "arm-focused",
+   "dominant_regions": [
+    "arms"
+   ],
+   "region_share": {
+    "arms": 0.54,
+    "legs": 0.21,
+    "torso": 0.09,
+    "head": 0.16
+   },
+   "features": {
+    "mean_speed_mps": 0.976,
+    "vertical_bounce_mps": 0.217,
+    "torso_twist_range_deg": 22.9,
+    "torso_side_lean_range_deg": 9.7
+   }
+  },
+  {
+   "id": 2,
+   "start": 109,
+   "end": 192,
+   "start_s": 3.63,
+   "end_s": 6.4,
+   "accents": [
+    111,
+    138,
+    181,
+    191
+   ],
+   "beats": [
+    111,
+    138,
+    154,
+    181,
+    191
+   ],
+   "label": "arm-focused",
+   "dominant_regions": [
+    "arms",
+    "legs"
+   ],
+   "region_share": {
+    "arms": 0.51,
+    "legs": 0.25,
+    "torso": 0.09,
+    "head": 0.15
+   },
+   "features": {
+    "mean_speed_mps": 0.81,
+    "vertical_bounce_mps": 0.15,
+    "torso_twist_range_deg": 10.2,
+    "torso_side_lean_range_deg": 7.3
+   }
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "attempts": 2,
+ "best_attempt": 1,
+ "passed": true,
+ "history": [
+  {
+   "attempt": 1,
+   "passed": true,
+   "accent_recall": 0.75,
+   "beat_precision": 1.0,
+   "limits": true,
+   "idle_units": true
+  },
+  {
+   "attempt": 2,
+   "passed": true,
+   "accent_recall": 0.75,
+   "beat_precision": 1.0,
+   "limits": true,
+   "idle_units": true
+  }
+ ],
+ "final_message": "The plush dances with sweeping blue-arm gestures, face nods, and gentle body turns. Small hops stand in for the dancer\u2019s footwork, with sharper arm pulses in the final phrase. The motion plan passed the rhythm and rig checks.",
+ "model": "openai/gpt-6-sol"
+}

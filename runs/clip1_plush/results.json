@@ -1,0 +1,29 @@
+[
+ {
+  "run": "clip1_plush",
+  "system": "agent",
+  "accent_recall": 0.75,
+  "beat_precision": 1.0,
+  "beat_alignment": 0.849,
+  "mean_offset_ms": 55.6,
+  "limit_violations": 0,
+  "idle_units": 0,
+  "mean_motion": 1.142,
+  "jerk": 0.416,
+  "all_checks_passed": true,
+  "attempts": 2
+ },
+ {
+  "run": "clip1_plush",
+  "system": "posecopy",
+  "accent_recall": 0.125,
+  "beat_precision": 0.429,
+  "beat_alignment": 0.43,
+  "mean_offset_ms": 66.7,
+  "limit_violations": 3,
+  "idle_units": 0,
+  "mean_motion": 2.821,
+  "jerk": 0.611,
+  "all_checks_passed": false
+ }
+]
