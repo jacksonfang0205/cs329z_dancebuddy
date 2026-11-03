@@ -11,7 +11,7 @@ from __future__ import annotations
 import numpy as np
 
 from .beats import smooth
-from .perception import L_HIP, L_SH, NOSE, R_HIP, R_SH, wrap_deg
+from .perception import L_EL, L_HIP, L_SH, NOSE, R_EL, R_HIP, R_SH, wrap_deg
 
 
 def _angle(a: np.ndarray, b: np.ndarray) -> np.ndarray:
@@ -40,7 +40,7 @@ def pose_copy(kp: dict, card: dict) -> dict:
     def rel(x):  # motion relative to the dancer's typical pose, lightly smoothed
         return smooth(x - np.median(x), 1.0)
 
-    bones = [b["name"] for b in card["bones"]]
+    bones = [b["name"] for b in card["bones"] if not b.get("limb")]
     root = card.get("root_bone", bones[0])
     chain = [b for b in bones if b != root]
     ch: dict[str, np.ndarray] = {f"{root}.lift": smooth(lift, 1.0)}
@@ -52,6 +52,14 @@ def pose_copy(kp: dict, card: dict) -> dict:
         ch[f"{b}.twist"] = rel(twist) / len(body)
     ch[f"{top}.lean"] = rel(head_lean)
     ch[f"{top}.sway"] = rel(head_side)
+    # limbs: copy the dancer's upper-arm elevation onto arm bones of the same side
+    for b in card["bones"]:
+        if b.get("limb") != "arm":
+            continue
+        sh_i, el_i = (L_SH, L_EL) if b.get("side") == "left" else (R_SH, R_EL)
+        u = w[:, el_i] - w[:, sh_i]
+        elevation = _angle(np.abs(u[:, 0]), u[:, 1])  # 0 = arm hanging down, 90 = horizontal
+        ch[f"{b['name']}.lean"] = rel(elevation)
     return {
         "fps": fps, "n_frames": n, "character": card.get("name", "character"),
         "channels": {k: [round(float(x), 5) for x in v] for k, v in sorted(ch.items())},

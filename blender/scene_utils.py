@@ -39,7 +39,7 @@ def setup_stage(target_z=0.95, height=1.9):
     fill.data.size = 4
     fill.rotation_euler = (math.radians(60), 0, math.radians(-45))
     # camera, framed for a portrait-ish view with room to bounce
-    bpy.ops.object.camera_add(location=(0, -6.5, target_z + 0.6))
+    bpy.ops.object.camera_add(location=(0, -(3.2 * height + 0.6), target_z + 0.6 * height / 1.9))
     cam = bpy.context.active_object
     direction = Vector((0, 0, target_z + 0.1)) - cam.location
     cam.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()

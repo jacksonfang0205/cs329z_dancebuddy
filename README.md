@@ -62,7 +62,17 @@ open runs/synth/side_by_side.mp4
 uv run python -m dancebuddy demo path/to/dance.mp4 runs/clip1 --image path/to/character.png
 ```
 
-Leave out `--image` to use the 3D capsule. The picture can be a PNG with a transparent background, or any image of
+**A 3D model instead of a picture** (an unrigged GLB/GLTF/OBJ/FBX, e.g. from Tripo's image-to-3D):
+
+```sh
+uv run python -m dancebuddy model path/to/plush.glb assets/plush       # decimate, auto-rig (spine + arms), card
+uv run python -m dancebuddy demo path/to/dance.mp4 runs/clip2 --char assets/plush
+```
+
+3D models are not committed to git (they are large); put them in `assets/` yourself. If the model faces away from
+the camera, add `--yaw 180` (or 90/-90) to `model`.
+
+Leave out `--image` and `--char` to use the 3D capsule. The picture can be a PNG with a transparent background, or any image of
 one character on a plain, single-colour background (it is keyed out automatically). Try
 `examples/sample_character.png` first.
 
@@ -73,6 +83,7 @@ one character on a plain, single-colour background (it is keyed out automaticall
 | Command | What it does | Output |
 | --- | --- | --- |
 | `puppet PICTURE assets/NAME` | Cuts the character out of the picture, builds a flat mesh with a 4-bone spine (weighted by height), writes the character card. Use `--char assets/NAME` in later steps | `NAME.blend`, `NAME_rig.json`, `NAME_sprite.png`, `NAME_card.json` |
+| `model MODEL.glb assets/NAME` | Imports an unrigged 3D model, decimates it to ~80k faces, scales it to fit, adds a 4-bone spine plus an arm bone for each limb sticking out sideways, renders 4 views, writes the card | `NAME.blend`, `NAME_rig.json`, `NAME_views/`, `NAME_card.json` |
 | `character [assets/capsule]` | Builds the capsule character in Blender, renders front/side/¾/back views | `capsule.blend`, `capsule_rig.json`, `capsule_views/` |
 | `card assets/capsule_rig.json` | The LLM looks at the views + rig and describes the body (parts, missing human parts, substitutions). `--no-vlm` for rig only | `capsule_card.json` |
 | `perceive VIDEO RUN` | MediaPipe pose → kinematic beats and accents → ~2 s move units with body-region shares | `keypoints.npz`, `dance_score.json` |
@@ -125,7 +136,7 @@ Cached calls are free, so re-running an unchanged step costs nothing.
 
 ## Known limitations (midpoint)
 
-- Characters get a vertical 4-bone spine only. A picture of a character with arms or a tail gets no extra bones for them yet.
+- Rigs are a vertical 4-bone spine. 3D models also get arm bones when limbs stick out sideways; pictures do not yet, and legs/tails are not detected.
 - Picture puppets are flat: `sway` reads well; `lean` and `twist` turn the card out of the picture plane, so their limits are lower.
 - A humanoid control and more body plans (quadruped, snake, bird) come next.
 - Beat detection is kinematic only. Music beats (e.g. AIST++ clips with audio) are not used yet.

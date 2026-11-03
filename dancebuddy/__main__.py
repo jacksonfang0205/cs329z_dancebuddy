@@ -4,6 +4,7 @@
   python -m dancebuddy perceive   VIDEO runs/clip1                 # pose -> dance_score.json
   python -m dancebuddy character  assets/capsule                   # build + render the capsule character
   python -m dancebuddy puppet     PICTURE assets/blob              # character picture -> rigged 2D puppet + card
+  python -m dancebuddy model      MODEL.glb assets/plush           # unrigged 3D model -> rigged character + card
   python -m dancebuddy card       assets/capsule_rig.json          # VLM character card
   python -m dancebuddy agent      runs/clip1                       # plan -> check -> revise
   python -m dancebuddy baseline   runs/clip1                       # pose-copy baseline
@@ -96,6 +97,15 @@ def cmd_puppet(a):
     from .puppet import cut_out
     cut_out(a.image, a.char)
     run(blender_cmd("make_puppet.py", ["--out", str(a.char), "--engine", a.engine]))
+    build_card(Path(str(a.char) + "_rig.json"), card_path(Path(a.char)), use_vlm=not a.no_vlm)
+
+
+def cmd_model(a):
+    from .character import build_card
+    args = ["--model", str(Path(a.model).expanduser().resolve()), "--out", str(a.char), "--engine", a.engine]
+    if a.yaw:
+        args += ["--yaw", str(a.yaw)]
+    run(blender_cmd("make_model.py", args))
     build_card(Path(str(a.char) + "_rig.json"), card_path(Path(a.char)), use_vlm=not a.no_vlm)
 
 
@@ -277,6 +287,9 @@ def main(argv=None):
     s.add_argument("char", type=Path, nargs="?", default=DEFAULT_CHAR); s.add_argument("--engine", default="auto")
     s = add("puppet", cmd_puppet, "image"); s.add_argument("char", type=Path, help="output prefix, e.g. assets/blob")
     s.add_argument("--engine", default="auto"); s.add_argument("--no-vlm", action="store_true")
+    s = add("model", cmd_model, "model"); s.add_argument("char", type=Path, help="output prefix, e.g. assets/plush")
+    s.add_argument("--engine", default="auto"); s.add_argument("--no-vlm", action="store_true")
+    s.add_argument("--yaw", type=float, default=0.0, help="rotate the model (degrees) if it does not face the camera")
     s = add("card", cmd_card, "rig"); s.add_argument("--no-vlm", action="store_true")
     s = add("agent", cmd_agent, "run"); char_opt(s)
     s.add_argument("--name"); s.add_argument("--attempts", type=int, default=4); s.add_argument("--model")
