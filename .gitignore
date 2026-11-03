@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+assets/*.task
+runs/*/*/frames/
+runs/*/attempt_*/
+.cache/llm/ledger.jsonl
+*.blend1
+.DS_Store
+.env*
+*.glb

@@ -1,0 +1,79 @@
+{
+ "passed": false,
+ "checks": {
+  "accent_recall": {
+   "value": 0.375,
+   "threshold": 0.75,
+   "passed": false,
+   "missed_accents": [
+    {
+     "frame": 15,
+     "unit_id": 0
+    },
+    {
+     "frame": 68,
+     "unit_id": 1
+    },
+    {
+     "frame": 111,
+     "unit_id": 2
+    },
+    {
+     "frame": 181,
+     "unit_id": 2
+    },
+    {
+     "frame": 191,
+     "unit_id": 2
+    }
+   ]
+  },
+  "beat_precision": {
+   "value": 0.778,
+   "threshold": 0.5,
+   "passed": true,
+   "off_beat_hits": [
+    {
+     "frame": 35,
+     "unit_id": 0
+    },
+    {
+     "frame": 126,
+     "unit_id": 2
+    }
+   ]
+  },
+  "limits": {
+   "passed": false,
+   "violations": [
+    {
+     "channel": "top.lean",
+     "limit": 20,
+     "peak": 24.442,
+     "frames": [
+      27,
+      29
+     ]
+    },
+    {
+     "channel": "top.sway",
+     "limit": 35,
+     "peak": 77.226,
+     "frames": [
+      14,
+      88
+     ]
+    }
+   ]
+  },
+  "idle_units": {
+   "passed": true,
+   "unit_ids": []
+  }
+ },
+ "summary": {
+  "n_accents": 8,
+  "n_character_hits": 9,
+  "mean_offset_ms": 0.0
+ }
+}

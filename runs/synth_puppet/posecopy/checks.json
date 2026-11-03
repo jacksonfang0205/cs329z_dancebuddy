@@ -1,0 +1,91 @@
+{
+ "passed": false,
+ "checks": {
+  "accent_recall": {
+   "value": 0.364,
+   "threshold": 0.75,
+   "passed": false,
+   "missed_accents": [
+    {
+     "frame": 17,
+     "unit_id": 0
+    },
+    {
+     "frame": 33,
+     "unit_id": 0
+    },
+    {
+     "frame": 49,
+     "unit_id": 0
+    },
+    {
+     "frame": 66,
+     "unit_id": 1
+    },
+    {
+     "frame": 82,
+     "unit_id": 1
+    },
+    {
+     "frame": 99,
+     "unit_id": 1
+    },
+    {
+     "frame": 115,
+     "unit_id": 2
+    },
+    {
+     "frame": 246,
+     "unit_id": 4
+    },
+    {
+     "frame": 262,
+     "unit_id": 4
+    },
+    {
+     "frame": 279,
+     "unit_id": 4
+    },
+    {
+     "frame": 295,
+     "unit_id": 5
+    },
+    {
+     "frame": 311,
+     "unit_id": 5
+    },
+    {
+     "frame": 328,
+     "unit_id": 5
+    },
+    {
+     "frame": 344,
+     "unit_id": 5
+    }
+   ]
+  },
+  "beat_precision": {
+   "value": 1.0,
+   "threshold": 0.5,
+   "passed": true,
+   "off_beat_hits": []
+  },
+  "limits": {
+   "passed": true,
+   "violations": []
+  },
+  "idle_units": {
+   "passed": false,
+   "unit_ids": [
+    0,
+    1,
+    5
+   ]
+  }
+ },
+ "summary": {
+  "n_accents": 22,
+  "n_character_hits": 13,
+  "mean_offset_ms": 0.0
+ }
+}

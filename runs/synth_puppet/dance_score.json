@@ -1,0 +1,304 @@
+{
+ "source": "x",
+ "fps": 30.0,
+ "n_frames": 360,
+ "duration_s": 12.0,
+ "beats": [
+  17,
+  26,
+  33,
+  43,
+  49,
+  59,
+  66,
+  75,
+  82,
+  92,
+  99,
+  108,
+  115,
+  124,
+  130,
+  139,
+  147,
+  155,
+  163,
+  171,
+  179,
+  188,
+  196,
+  204,
+  212,
+  220,
+  229,
+  238,
+  246,
+  255,
+  262,
+  272,
+  279,
+  288,
+  295,
+  304,
+  311,
+  321,
+  328,
+  337,
+  344,
+  354
+ ],
+ "accents": [
+  17,
+  33,
+  49,
+  66,
+  82,
+  99,
+  115,
+  155,
+  163,
+  171,
+  179,
+  188,
+  196,
+  204,
+  212,
+  246,
+  262,
+  279,
+  295,
+  311,
+  328,
+  344
+ ],
+ "units": [
+  {
+   "id": 0,
+   "start": 0,
+   "end": 56,
+   "start_s": 0.0,
+   "end_s": 1.87,
+   "accents": [
+    17,
+    33,
+    49
+   ],
+   "beats": [
+    17,
+    26,
+    33,
+    43,
+    49
+   ],
+   "label": "arm-focused",
+   "dominant_regions": [
+    "arms"
+   ],
+   "region_share": {
+    "arms": 1.0,
+    "legs": 0.0,
+    "torso": 0.0,
+    "head": 0.0
+   },
+   "features": {
+    "mean_speed_mps": 0.215,
+    "vertical_bounce_mps": 0.0,
+    "torso_twist_range_deg": 0.0,
+    "torso_side_lean_range_deg": 0.0
+   }
+  },
+  {
+   "id": 1,
+   "start": 57,
+   "end": 112,
+   "start_s": 1.9,
+   "end_s": 3.73,
+   "accents": [
+    66,
+    82,
+    99
+   ],
+   "beats": [
+    59,
+    66,
+    75,
+    82,
+    92,
+    99,
+    108
+   ],
+   "label": "arm-focused",
+   "dominant_regions": [
+    "arms"
+   ],
+   "region_share": {
+    "arms": 1.0,
+    "legs": 0.0,
+    "torso": 0.0,
+    "head": 0.0
+   },
+   "features": {
+    "mean_speed_mps": 0.25,
+    "vertical_bounce_mps": 0.0,
+    "torso_twist_range_deg": 0.0,
+    "torso_side_lean_range_deg": 0.0
+   }
+  },
+  {
+   "id": 2,
+   "start": 113,
+   "end": 168,
+   "start_s": 3.77,
+   "end_s": 5.6,
+   "accents": [
+    115,
+    155,
+    163
+   ],
+   "beats": [
+    115,
+    124,
+    130,
+    139,
+    147,
+    155,
+    163
+   ],
+   "label": "arm-focused",
+   "dominant_regions": [
+    "arms"
+   ],
+   "region_share": {
+    "arms": 0.77,
+    "legs": 0.0,
+    "torso": 0.23,
+    "head": 0.0
+   },
+   "features": {
+    "mean_speed_mps": 0.243,
+    "vertical_bounce_mps": 0.0,
+    "torso_twist_range_deg": 51.9,
+    "torso_side_lean_range_deg": 0.0
+   }
+  },
+  {
+   "id": 3,
+   "start": 169,
+   "end": 226,
+   "start_s": 5.63,
+   "end_s": 7.53,
+   "accents": [
+    171,
+    179,
+    188,
+    196,
+    204,
+    212
+   ],
+   "beats": [
+    171,
+    179,
+    188,
+    196,
+    204,
+    212,
+    220
+   ],
+   "label": "arm-focused",
+   "dominant_regions": [
+    "arms",
+    "torso"
+   ],
+   "region_share": {
+    "arms": 0.72,
+    "legs": 0.0,
+    "torso": 0.28,
+    "head": 0.0
+   },
+   "features": {
+    "mean_speed_mps": 0.217,
+    "vertical_bounce_mps": 0.0,
+    "torso_twist_range_deg": 52.0,
+    "torso_side_lean_range_deg": 0.0
+   }
+  },
+  {
+   "id": 4,
+   "start": 227,
+   "end": 285,
+   "start_s": 7.57,
+   "end_s": 9.5,
+   "accents": [
+    246,
+    262,
+    279
+   ],
+   "beats": [
+    229,
+    238,
+    246,
+    255,
+    262,
+    272,
+    279
+   ],
+   "label": "footwork",
+   "dominant_regions": [
+    "legs",
+    "arms"
+   ],
+   "region_share": {
+    "arms": 0.26,
+    "legs": 0.63,
+    "torso": 0.1,
+    "head": 0.0
+   },
+   "features": {
+    "mean_speed_mps": 0.375,
+    "vertical_bounce_mps": 0.26,
+    "torso_twist_range_deg": 25.8,
+    "torso_side_lean_range_deg": 0.0
+   }
+  },
+  {
+   "id": 5,
+   "start": 286,
+   "end": 359,
+   "start_s": 9.53,
+   "end_s": 11.97,
+   "accents": [
+    295,
+    311,
+    328,
+    344
+   ],
+   "beats": [
+    288,
+    295,
+    304,
+    311,
+    321,
+    328,
+    337,
+    344,
+    354
+   ],
+   "label": "footwork",
+   "dominant_regions": [
+    "legs"
+   ],
+   "region_share": {
+    "arms": 0.0,
+    "legs": 1.0,
+    "torso": 0.0,
+    "head": 0.0
+   },
+   "features": {
+    "mean_speed_mps": 0.414,
+    "vertical_bounce_mps": 0.323,
+    "torso_twist_range_deg": 0.0,
+    "torso_side_lean_range_deg": 0.0
+   }
+  }
+ ]
+}

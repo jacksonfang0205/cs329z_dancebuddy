@@ -1,0 +1,47 @@
+{
+ "passed": true,
+ "checks": {
+  "accent_recall": {
+   "value": 0.818,
+   "threshold": 0.75,
+   "passed": true,
+   "missed_accents": [
+    {
+     "frame": 155,
+     "unit_id": 2
+    },
+    {
+     "frame": 246,
+     "unit_id": 4
+    },
+    {
+     "frame": 262,
+     "unit_id": 4
+    },
+    {
+     "frame": 279,
+     "unit_id": 4
+    }
+   ]
+  },
+  "beat_precision": {
+   "value": 1.0,
+   "threshold": 0.5,
+   "passed": true,
+   "off_beat_hits": []
+  },
+  "limits": {
+   "passed": true,
+   "violations": []
+  },
+  "idle_units": {
+   "passed": true,
+   "unit_ids": []
+  }
+ },
+ "summary": {
+  "n_accents": 22,
+  "n_character_hits": 18,
+  "mean_offset_ms": 42.6
+ }
+}

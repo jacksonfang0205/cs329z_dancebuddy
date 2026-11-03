@@ -1,0 +1,17 @@
+{
+ "attempts": 1,
+ "best_attempt": 1,
+ "passed": true,
+ "history": [
+  {
+   "attempt": 1,
+   "passed": true,
+   "accent_recall": 0.75,
+   "beat_precision": 0.857,
+   "limits": true,
+   "idle_units": true
+  }
+ ],
+ "final_message": "The character now follows the dancer\u2019s accents with side-to-side motions that carry its attached mittens. Hops replace footwork, and face nods and soft compressions add emphasis. The motion plan passed the animation checks.",
+ "model": "openai/gpt-6-sol"
+}

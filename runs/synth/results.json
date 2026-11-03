@@ -1,0 +1,28 @@
+[
+ {
+  "run": "synth",
+  "system": "handwritten",
+  "accent_recall": 0.818,
+  "beat_precision": 1.0,
+  "beat_alignment": 0.875,
+  "mean_offset_ms": 42.6,
+  "limit_violations": 0,
+  "idle_units": 0,
+  "mean_motion": 0.749,
+  "jerk": 0.277,
+  "all_checks_passed": true
+ },
+ {
+  "run": "synth",
+  "system": "posecopy",
+  "accent_recall": 0.364,
+  "beat_precision": 1.0,
+  "beat_alignment": 0.996,
+  "mean_offset_ms": 0.0,
+  "limit_violations": 0,
+  "idle_units": 3,
+  "mean_motion": 0.238,
+  "jerk": 0.083,
+  "all_checks_passed": false
+ }
+]
